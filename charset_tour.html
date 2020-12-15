@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>✈️Network Travel🌐</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="wow.min.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+			
+		@font-face{src:url(NewYork.otf); font-family:newyork}
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+		html{scroll-behavior: smooth; font-family: 'Noto Sans KR', sans-serif;}
+		body{position: relative; background-color: #0066ff; background-image: linear-gradient(#0066ff,#0000ff);margin: 0px;}
+
+		.row{width: 80%; height:1200px; margin: auto; margin-bottom: 20px;position: relative; display: block;}
+		.intro{padding: 10%; height: 1200px; color: white; font-size: 2em; }
+		.fadein{animation: fadein 4s;}
+		#passButton{width: 70px;}
+		#goButton{width: 200px;text-decoration: none;}
+		.button{height: 30px; background: white; border-radius: 20px; cursor: pointer;border: none; font-size: 1.3rem; color: #0066ff}
+		#checkButton{}
+		@keyframes fadein{
+			from{opacity: 0;}
+			to{opacity: 1}
+		}
+		div label{font-size: 1.2rem;}
+		input{height:30px; background: none; border: none; border-bottom: solid white 1px; width: 300px; margin:15px;}
+		#passport{width: 700px; top: 500px; left: 600px; animation: issue 2s; animation-play-state: paused;}
+		@keyframes issue{
+			from{left: 2000px;}
+			to{left: 600px;}
+		}
+		.textbox{left: 100px;width: 40%; height: 1200px; margin:auto; position: absolute; animation: tt 2s; z-index: 1; color: white; background: none;}
+		.info{padding: 10px; color: white; font-size: 2em;}
+		@keyframes tt{
+			from{left: -1000px; opacity: 0}
+			to{left: 100px; opacity: 1}	
+		}
+		h1{text-align: center; font-family: newyork; font-size: 10em; width: 100%; color: white; margin-top: 300px; margin-bottom: 300px;text-align: center;}
+		h2{font-family: newyork; font-size: 2.5em;}
+		.leaf{width: 300px; top: 1000px; cursor: pointer;}
+		.leaf:hover{top: 980px; transition: 1s}
+		#leaf1_1{left: 400px;transform: rotate(-20deg); z-index: 1}
+		#leaf2_1{left: 650px; transform: rotate(0deg); z-index: 2}
+		#leaf3_1{left: 900px; transform: rotate(10deg); z-index: 3}
+		#paper{width: 1000px; top: -300px; left: 50%; transform: rotate(5deg); z-index: 0}
+		.final_leaf{width: 300px; cursor: pointer;}
+		#final_leaf1_1{top: 500px; left: -100px; transform: rotate(20deg);}
+		#final_leaf1_1:hover {top: 480px; transition: 1s}
+		#final_leaf2_1{top: 800px; left: 30px; transform: rotate(30deg);}
+		#final_leaf2_1:hover {top: 780px; transition: 1s}
+		#final_leaf3_1{top: 1000px; left: -140px; transform: rotate(70deg);}
+		#final_leaf3_1:hover {top: 980px; transition: 1s}
+
+		.final_leaf_{width: 900px; cursor: pointer;}
+		#final_leaf1_2{top: 200px; left: 700px; transform: rotate(-20deg);}
+		#final_leaf1_2:hover{top: 380px; transition: 1s}
+		#final_leaf2_2{top: 600px; left:900px; transform: rotate(10deg);}
+		#final_leaf2_2:hover{top: 580px; transition: 1s}
+		#final_leaf3_2{top: 1000px; left: 1000px; transform: rotate(-20deg);}
+		#final_leaf3_2:hover{top: 980px; transition: 1s}
+
+
+		#ticket1{top: 1400px; left: 400px; transform: rotate(24deg);}
+		#ticket1:hover{transform: scale(1.1,1.1); transition: 1s}
+		#ticket2{top: 1600px; left: 500px; transform: rotate(4deg);}
+		#ticket2:hover{transform: scale(1.1,1.1); transition: 1s}
+		#ticket3{top: 1800px; left: 200px; transform: rotate(-8deg);}
+		#ticket3:hover{transform: scale(1.1,1.1); transition: 1s}
+		.ticket{width: 800px; cursor: pointer; }
+	
+
+		.bag{ top: 50px; left: 30%;}
+		.surf{height: 500px;}
+		#board{position: relative; margin: auto; width: 100%}
+		.bttani{animation:btt 1s; }
+		@keyframes btt{
+			from{opacity: 0; margin-top: 100px;}
+			to{opacity: 1; margin-top: 0px;}
+		}
+		#gif1:hover ~ #info1{ opacity: 1;border: 2px #0066ff solid; width: 400px; position: relative; top: 750px; left: 50px; z-index: 4; background: white; font-size: 1.2em; color: #0066ff; padding: 10px;}
+		#gif2:hover ~ #info2{ opacity: 1;border: 2px #0066ff solid; width: 400px; position: relative; top: 650px; left: 350px; z-index: 4;  background: white; font-size: 1.2em; color: #0066ff; padding: 10px;}
+		#gif3:hover ~ #info3{ opacity: 1;border: 2px #0066ff solid; width: auto; position: relative; top: 750px; left: 50px; z-index: 4; display: inline-block; background: white; font-size: 1.2em; color: #0066ff; padding: 10px;}
+		#gif4:hover ~ #info4{ opacity: 1;border: 2px #0066ff solid; width: auto; position: relative; top: 550px; left: 350px; z-index: 4; display: inline-block; background: white; font-size: 1.2em; color: #0066ff; padding: 10px;}
+		#gif5:hover ~ #info5{ opacity: 1;border: 2px #0066ff solid; width: auto; position: relative; top: 750px; left: 50px; z-index: 4; display: inline-block; background: white; font-size: 1.2em; color: #0066ff; padding: 10px;}
+		#gif6:hover ~ #info6{ opacity: 1;border: 2px #0066ff solid; width: auto; position: relative; top: 600px; left: 350px; z-index: 4; display: inline-block; background: white; font-size: 1.2em; color: #0066ff; padding: 10px;}
+		#gif7:hover ~ #info7{ opacity: 1;border: 2px #0066ff solid; width: auto; position: relative; top: 750px; left: 50px; z-index: 4; display: inline-block; background: white; font-size: 1.2em; color: #0066ff; padding: 10px;}
+		#gif8:hover ~ #info8{ opacity: 1;border: 2px #0066ff solid; width: auto; position: relative; top: 600px; left: 350px; z-index: 4; display: inline-block; background: white; font-size: 1.2em; color: #0066ff; padding: 10px;}
+		.giftitle{font-weight: bold; font-size: 1.2em;}
+		div img{position: absolute; display: block; z-index: 2}
+		.sticky{
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0; left: 0; width: 100%; height: 60px; padding: 5px;margin: none;
+			padding: 0px;
+			font-size: 3rem; color: white; background: black; z-index: 10; border-top: white solid 2px; border-bottom: white solid 2px; font-family: newyork;}
+		#bag2{top: 300px;}
+		.stickerR30{transform: rotate(30deg);}
+		.stickerR-30{transform: rotate(-30deg);}
+		.sticker150{width: 150px;}
+		.sticker300{width: 300px;}
+		.sticker400{width: 400px;}
+		#luggage{animation: bye 3s; animation-play-state: paused;}
+		@keyframes bye{
+			from{left: 0}
+			to{left: 3000px;};
+		}
+
+@keyframes flowing {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+	</style>
+</head>
+<body>
+	<h1 class="fadein">Network Travel</h1>
+	<div class=" row intro fadein wow">
+			<p style="font-size: 0.5em">크롬 브라우저 이용을 권장드립니다. </p>
+			<p>안녕하세요?
+			오늘 하루, 여러분의 네트워크 여행을 도울 챠셋투어입니다. 
+			<br>저희 챠셋투어에서는, 네트워크 여행을 위한 여권 발급, 패킹, 이동 및 환전, 비행 티켓 예매 등 여행의 전 과정에서 여러분을 도와드리고 있습니다. 
+			<br>여러분의 네트워크 여행을, 진심으로 환영합니다.</p>
+
+			<p>저희 챠셋투어에서는, 다음과 같은 세 가지 여행 코스를 제공하고 있습니다.</p>
+			<p>'괴담 모음지' 코스는, 검은 화면을 배경으로 각종 괴담과 의미를 알 수 없는 인터넷 공간을 제공합니다. 한겨울에도 오싹해지고 싶은 분들이라면, 이 코스를 추천합니다.</p>
+
+			<p>'세기초 놀이공원' 코스에서는, 스릴을 느낄 수 있는 온라인 상의 공간들을 마음껏 뛰놀며, 추억의 웹 게임들을 만나보실 수 있습니다.</p>
+
+			<p>'휴양지' 코스에서는, 많은 이들이 찾지만 현실처럼 북적이지 않는, 고객님만을 위한 공간에서 잔잔한 음악을 즐기며 휴식을 취하실 수 있습니다.</p>
+
+			<p>아래 리플렛을 클릭해, 각 코스에 대한 설명을 읽어보신 후, 네트워크 여행을 준비하며 원하는 코스를 고민해보시길 바랍니다. 코스 선택과 티켓 발권은 공항에서 이루어지니, 천천히 생각해보셔도 좋습니다.</p>
+
+			<p>다시 한 번, 저희 챠셋투어를 선택해주셔서 감사합니다.
+		</p>
+		<img src="leaf1_1.png" class="leaf" id="leaf1_1">
+		<img src="leaf2_1.png" class="leaf" id="leaf2_1">
+		<img src="leaf3_1.png" class="leaf" id="leaf3_1">
+	</div>
+	<span class=" info textbox wow">
+		<h2>Pass Issuance</h2>
+		<p>네트워크 여행을 위해서는 '네트워크 패스'를 발급받아야 합니다. 다음 양식을 채운 후, '발급' 버튼을 눌러서 '네트워크 패스'를 간단하게 발급받을 수 있도록 도와드리고 있습니다.</p> 
+		<div><label>온라인명</label><input type="text"></div>
+		<div><label>최초 계정 생성일</label><input type="date"></div>
+		<div><label>고유번호</label><input type="number" placeholder="원하는 아무 숫자나 입력하세요."></div>
+		<div><label>가장 소속감을 느끼는 국가</label><input></div>
+		<div><label>위의 정보가 국제네트워크센터에 수집됨에 동의하십니까?</label></div>
+		<div><input type="checkbox"></div>
+		<button id="passButton" class="button">발급</button>
+	</span>
+	<div class="row">
+		<img src="paper.png" id="paper">
+		<img src="pass.png" id="passport">
+	</div>
+	<span class=" info textbox wow">
+		<h2>Packing</h2>
+		<p>공항으로 출발하기 전에, 짐을 싸는 것을 도와드리고 있습니다. 각 물건들에 마우스를 올려 검토해보신 후, 가방에 드래그하여 담아보시길 바랍니다. 원하는 만큼 자아를 담은 후, '공항으로 출발' 버튼을 클릭하시면 공항으로 안내해드리겠습니다. </p>
+		<a id="goButton" class="button" href="#airport">공항으로 출발</a>
+	</span>
+	<div class="row">
+		<img src="bag1.png" class="bag">
+		<img src="bag1_.png" class="bag" style="z-index: 3">
+
+		<img src="https://media.giphy.com/media/4PXXgk8pFA5d7d53HJ/source.gif" id="gif1" class="drag bttani" style="width: 300px;top: 500px; left: -100px;">
+		<div id="info1">
+			<p class="giftitle">키보드 워리어 자아</p><p>타인과의 의사소통에서 <br>'우위'를 점하고자 하는 마음이 높은 자아입니다. <br>지적능력-3 분노상태+4</p></div>
+		<img src="https://media.giphy.com/media/j5VFIEwc5wEOM7WHDu/giphy.gif" id="gif2" class="drag bttani gif" style="width: 300px;top: 500px; left: 200px;">
+		<div id="info2">
+			<p class="giftitle">지식인 자아</p><p>타인에게 지식을 전하고자 하는 마음이 <br>강한 자아입니다. 발현 방향에 따라, <br>'스피드웨건' 타입이 되거나 <br>'꼰대' 타입이 될 수 있음에 <br>주의하여 주십시오.</p></div>
+		<img src="https://media.giphy.com/media/Jr5iS84ZOmlGDQBvx3/giphy.gif" class="drag bttani" id="gif3" style="width: 300px;top: 800px; left: -100px;">
+		<div id="info3">
+			<p class="giftitle">익명 자아</p><p>온라인 상에 방문기록 외의 <br>흔적을 남기지 않는 자아입니다. <br>조용하며, 집중력이 높으나 의견표출을 요구하는 <br>일부 서비스에 참여하지 못할 수 있음에 <br>주의하여 주십시오.</p></div>
+		<img src="https://media.giphy.com/media/d8iwlJtQbMxTng6gdk/giphy.gif" class="drag bttani" id="gif4" style="width: 300px;top: 800px; left: 200px;">
+			<div id="info4">
+			<p class="giftitle">관종 자아</p><p>여러 사람이 모이는 일이 필요할 경우 <br>필수로 챙겨야 할 자아입니다. <br>자아가 비대해질 경우, '죄송합니다' 영상을 올리는 결말을<br> 맞이할 가능성이 높아지니 <br>주의하여 주십시오.</p></div>
+		<img src="https://media.giphy.com/media/26BRCzP3XxfYrDqKY/giphy.gif" class="drag bttani" id="gif5" style="width: 300px;top: 1100px; left: -100px;">
+			<div id="info5">
+			<p class="giftitle">이야기꾼 자아 </p><p>온라인 상의 일들을 전달하고, 각색하여 <br>사람들의 흥미를 집중시키는 데에 최적화된 자아입니다. <br>'키보드 워리어 자아'나 '관종 자아'와 함께할 경우 <br>발생할 수 있는 문제에 대하여 책임지지 않습니다.</p></div>
+		<img src="https://media.giphy.com/media/26hiscq57iqE6m82Q/giphy.gif" class="drag bttani" id="gif6" style="width: 300px;top:1100px; left: 200px;">
+			<div id="info6">
+			<p class="giftitle">오타쿠 자아 </p><p>자신이 좋아하는 것을 <br>지속적으로 좋아할 수 있게 하는 <br>자아입니다. <br>지적능력+1 대인관계-2</p></div>
+		<img src="https://media.giphy.com/media/l0MYGlG4YLB51v0bu/giphy.gif" class="drag bttani" id="gif7" style="width: 300px;top: 1400px; left: -100px;">
+			<div id="info7">
+			<p class="giftitle">인플루언서 자아</p><p>하는 말, 행동이 타인에게 <br>많은 영향을 미치는 자아입니다. <br>영향력이 긍정적일지, 부정적일지는 기존 자아와 <br>추가로 동봉하는 자아에 따라 달라짐에 <br>주의하여 주십시오.</p></div>
+		<img src="https://media.giphy.com/media/58FdJeOdao2O0uFReE/giphy.gif" class="drag bttani" id="gif8" style="width: 300px;top: 1400px; left: 200px;">
+			<div id="info8">
+			<p class="giftitle">저장중독 자아 </p><p>이미지, 텍스트 등 다양한 형태의 정보를 <br>저장하는 데에 특화되어있는 자아입니다. <br>정보 저장을 위한 클라우드가 <br>탑재되어 있습니다.</p></div>
+	</div>
+	<div class="row"></div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/QJKioAmCkwUI03PcYC/giphy.gif" style="left: 700px; top: 100px;">
+		<img src="https://media.giphy.com/media/4Z3utskFp8PqEPHVsd/giphy.gif" style="left: 200px; top: 500px;"> 
+		<img src="https://media.giphy.com/media/upfHyxcN4YSqs/giphy.gif" style="left: 300px; top: 800px;">
+		<img src="https://media.giphy.com/media/IffxphsWUyta4EAQrA/giphy.gif"  style="left: 100px; top: 1200px;">
+		<img src="https://media.giphy.com/media/ZcKYuJ8bgEhRLg1i8h/giphy.gif"  style="left: 300px; top: 1500px;">
+		<img src="https://media.giphy.com/media/PgzY2IV8Iw6EIVFgg4/giphy.gif" style="left: 400px; top: 1700px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/XfsBpCy8z87wFNJyx5/giphy.gif" style="left: 700px; top: 100px;">
+		<img src="https://media.giphy.com/media/SXNhDcrRA5xn4Danwt/giphy.gif" style="left: 200px; top: 400px;">
+		<img src="https://media.giphy.com/media/KqJNTjFeYtMCQ/giphy.gif" style="left: 300px; top: 300px;">
+		<img src="https://media.giphy.com/media/l4FGIO2vCfJkakBtC/giphy.gif" style="left: 900px; top: 700px;">
+		<img src="https://media.giphy.com/media/xUOxf2Z6fLwKBTfGTK/giphy.gif"  style="left: 900px; top: 1500px;">
+		<img src="https://media.giphy.com/media/TLCZw6Uwwly6b9ekKb/giphy.gif" style="left: 100px; top: 1300px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/L05HgB2h6qICDs5Sms/giphy.gif" style="left: 100px; top: 100px;">
+		<img src="https://media.giphy.com/media/dgwAa9FIRTBeM/giphy.gif" style="left: 470px; top: 400px;">
+		<img src="https://media.giphy.com/media/gFPyt5ZSyTbGqhjOap/giphy.gif" style="left: 200px; top: 500px;">
+		<img src="https://media.giphy.com/media/fH94xEAz4foXUEzJxa/giphy.gif" style="left: 700px; top: 650px;">
+		<img src="https://media.giphy.com/media/paLTRWydS53cHGXKp1/giphy.gif" style="left: 200px; top: 700px;">
+		<img src="https://media.giphy.com/media/fp5QCDii8ytXi/giphy.gif" style="left: 350px; top: 800px;">
+		<img src="https://media.giphy.com/media/wCg6SuPk1a2sM/giphy.gif" style="left: 100px; top: 900px;">
+		<img src="https://media.giphy.com/media/UyOBKkKdFFaUw/giphy.gif" style="left: 800px; top: 1000px;">
+		</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/rXhJL89MenwS4/giphy.gif" style="left: 100px; top: 200px;">
+		<img src="https://media.giphy.com/media/wGkdWCykJrCuI/giphy.gif" style="left: 300px; top: 230px;">
+		<img src="https://media.giphy.com/media/5UJniH68rtRDQEjkFS/giphy.gif" style="left: 700px; top: 100px;">
+		<img src="https://media.giphy.com/media/XxR2vZZr9cLCOHqQQl/giphy.gif" style="left: 10px; top: 330px;">
+		<img src="https://media.giphy.com/media/8c6JFmkMcVcoL6OHnf/giphy.gif" style="left: 300px; top: 500px;">
+		<img src="https://media.giphy.com/media/fT1aMogIZPew4tqC5V/giphy.gif" style="left: 800px; top: 600px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/Jl9e1UFRyMQVy/giphy.gif" style="left: 10px; top: 0px;">
+		<img src="https://media.giphy.com/media/hVEspyKPUjgbe/giphy.gif" style="left: 350px; top: 100px;">
+		<img src="https://media.giphy.com/media/RAZ68SvqafGYE/giphy.gif" style="left: 800px; top: 300px;">
+		<img src="https://media.giphy.com/media/PP4xnqz5KT1rG/giphy.gif" style="left: 200px; top: 400px;">
+		<img src="https://media.giphy.com/media/3mz4FwiZvzS5W/giphy.gif" style="left: 230px; top: 500px;">
+		<img src="https://media.giphy.com/media/jmSi1xSHBJuDfQTiEN/giphy.gif" style="left: 100px; top: 600px;">
+		<img src="https://media.giphy.com/media/jXBwoFfPsCCoE/giphy.gif" style="left: 200px; top: 600px;">
+		<img src="https://media.giphy.com/media/QVPNCDaBnYe075MrdQ/giphy.gif" style="left: 900px; top: 620px;">
+		<img src="https://media.giphy.com/media/9P5eI3AsGoNMhyg45w/giphy.gif" style="left: 800px; top: 800px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/1gdidXnfLA8jkzg9Gg/giphy.gif" style="left: 10px; top: 100px;">
+		<img src="https://media.giphy.com/media/W5vHGFzy4I18I/giphy.gif" style="left: 600px; top: 200px;">
+		<img src="https://media.giphy.com/media/JpGQUcXD6o0FJ7wmWg/giphy.gif" style="left: 500px; top: 240px;">
+		<img src="https://media.giphy.com/media/YWVFCfodqm922sIDy6/giphy.gif" style="left: 400px; top: 600px;">
+		<img src="https://media.giphy.com/media/3ohs7XjrVT0zuGynS0/giphy.gif" style="left: 800px; top: 700px;">
+		<img src="https://media.giphy.com/media/26DN4yp6H7niCDSx2/giphy.gif" style="left: 900px; top: 800px;">
+		<img src="https://media.giphy.com/media/l4pTfRCHhJxQBJo64/giphy.gif" style="left: 1000px; top: 880px;">
+		<img src="https://media.giphy.com/media/1Bd8msCe9BEnqdLBDp/giphy.gif" style="left: 500px; top: 900px;">
+		<img src="https://media.giphy.com/media/ReBFFavLpEu9OTAJMT/giphy.gif" style="left: 800px; top: 1100px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/fxbEjepdturAlk7UJS/giphy.gif" style="left: 0px; top: 0px;">
+		<img src="https://media.giphy.com/media/dn0DBn3OoM9vQjEwwd/giphy.gif" style="left: 100px; top: 100px;">
+		<img src="https://media.giphy.com/media/f62OcbDyThwVupx6pm/giphy.gif" style="left: 220px; top: 170px;">
+		<img src="https://media.giphy.com/media/iMI5fPCQZSjLN1A3x8/giphy.gif" style="left: 800px; top: 300px;">
+		<img src="https://media.giphy.com/media/W5Uh0nn2R1OvL8ToQo/giphy.gif" style="left: 400px; top: 490px;">
+		<img src="https://media.giphy.com/media/dB5cUnEPznuMy3YAot/giphy.gif" style="left: 200px; top: 530px;">
+		<img src="https://media.giphy.com/media/q6BPWTPwWdoOc/giphy.gif" style="left: 100px; top: 800px;">
+		<img src="https://media.giphy.com/media/8cTekMSYZ3esdrGb1V/giphy.gifv3y/giphy.gif" style="left: 600px; top: 900px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/QJKioAmCkwUI03PcYC/giphy.gif" style="left: 700px; top: 100px;">
+		<img src="https://media.giphy.com/media/4Z3utskFp8PqEPHVsd/giphy.gif" style="left: 200px; top: 500px;"> 
+		<img src="https://media.giphy.com/media/upfHyxcN4YSqs/giphy.gif" style="left: 300px; top: 800px;">
+		<img src="https://media.giphy.com/media/IffxphsWUyta4EAQrA/giphy.gif"  style="left: 100px; top: 1200px;">
+		<img src="https://media.giphy.com/media/ZcKYuJ8bgEhRLg1i8h/giphy.gif"  style="left: 300px; top: 1500px;">
+		<img src="https://media.giphy.com/media/PgzY2IV8Iw6EIVFgg4/giphy.gif" style="left: 400px; top: 1700px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/XfsBpCy8z87wFNJyx5/giphy.gif" style="left: 700px; top: 100px;">
+		<img src="https://media.giphy.com/media/SXNhDcrRA5xn4Danwt/giphy.gif" style="left: 200px; top: 400px;">
+		<img src="https://media.giphy.com/media/KqJNTjFeYtMCQ/giphy.gif" style="left: 300px; top: 300px;">
+		<img src="https://media.giphy.com/media/l4FGIO2vCfJkakBtC/giphy.gif" style="left: 900px; top: 700px;">
+		<img src="https://media.giphy.com/media/xUOxf2Z6fLwKBTfGTK/giphy.gif"  style="left: 900px; top: 1500px;">
+		<img src="https://media.giphy.com/media/TLCZw6Uwwly6b9ekKb/giphy.gif" style="left: 100px; top: 1300px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/L05HgB2h6qICDs5Sms/giphy.gif" style="left: 100px; top: 100px;">
+		<img src="https://media.giphy.com/media/dgwAa9FIRTBeM/giphy.gif" style="left: 470px; top: 400px;">
+		<img src="https://media.giphy.com/media/gFPyt5ZSyTbGqhjOap/giphy.gif" style="left: 200px; top: 500px;">
+		<img src="https://media.giphy.com/media/fH94xEAz4foXUEzJxa/giphy.gif" style="left: 700px; top: 650px;">
+		<img src="https://media.giphy.com/media/paLTRWydS53cHGXKp1/giphy.gif" style="left: 200px; top: 700px;">
+		<img src="https://media.giphy.com/media/fp5QCDii8ytXi/giphy.gif" style="left: 350px; top: 800px;">
+		<img src="https://media.giphy.com/media/wCg6SuPk1a2sM/giphy.gif" style="left: 100px; top: 900px;">
+		<img src="https://media.giphy.com/media/UyOBKkKdFFaUw/giphy.gif" style="left: 800px; top: 1000px;">
+		</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/rXhJL89MenwS4/giphy.gif" style="left: 100px; top: 200px;">
+		<img src="https://media.giphy.com/media/wGkdWCykJrCuI/giphy.gif" style="left: 300px; top: 230px;">
+		<img src="https://media.giphy.com/media/5UJniH68rtRDQEjkFS/giphy.gif" style="left: 700px; top: 100px;">
+		<img src="https://media.giphy.com/media/XxR2vZZr9cLCOHqQQl/giphy.gif" style="left: 10px; top: 330px;">
+		<img src="https://media.giphy.com/media/8c6JFmkMcVcoL6OHnf/giphy.gif" style="left: 300px; top: 500px;">
+		<img src="https://media.giphy.com/media/fT1aMogIZPew4tqC5V/giphy.gif" style="left: 800px; top: 600px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/Jl9e1UFRyMQVy/giphy.gif" style="left: 10px; top: 0px;">
+		<img src="https://media.giphy.com/media/hVEspyKPUjgbe/giphy.gif" style="left: 350px; top: 100px;">
+		<img src="https://media.giphy.com/media/RAZ68SvqafGYE/giphy.gif" style="left: 800px; top: 300px;">
+		<img src="https://media.giphy.com/media/PP4xnqz5KT1rG/giphy.gif" style="left: 200px; top: 400px;">
+		<img src="https://media.giphy.com/media/3mz4FwiZvzS5W/giphy.gif" style="left: 230px; top: 500px;">
+		<img src="https://media.giphy.com/media/jmSi1xSHBJuDfQTiEN/giphy.gif" style="left: 100px; top: 600px;">
+		<img src="https://media.giphy.com/media/jXBwoFfPsCCoE/giphy.gif" style="left: 200px; top: 600px;">
+		<img src="https://media.giphy.com/media/QVPNCDaBnYe075MrdQ/giphy.gif" style="left: 900px; top: 620px;">
+		<img src="https://media.giphy.com/media/9P5eI3AsGoNMhyg45w/giphy.gif" style="left: 800px; top: 800px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/1gdidXnfLA8jkzg9Gg/giphy.gif" style="left: 10px; top: 100px;">
+		<img src="https://media.giphy.com/media/W5vHGFzy4I18I/giphy.gif" style="left: 600px; top: 200px;">
+		<img src="https://media.giphy.com/media/JpGQUcXD6o0FJ7wmWg/giphy.gif" style="left: 500px; top: 240px;">
+		<img src="https://media.giphy.com/media/YWVFCfodqm922sIDy6/giphy.gif" style="left: 400px; top: 600px;">
+		<img src="https://media.giphy.com/media/3ohs7XjrVT0zuGynS0/giphy.gif" style="left: 800px; top: 700px;">
+		<img src="https://media.giphy.com/media/26DN4yp6H7niCDSx2/giphy.gif" style="left: 900px; top: 800px;">
+		<img src="https://media.giphy.com/media/l4pTfRCHhJxQBJo64/giphy.gif" style="left: 1000px; top: 880px;">
+		<img src="https://media.giphy.com/media/1Bd8msCe9BEnqdLBDp/giphy.gif" style="left: 500px; top: 900px;">
+		<img src="https://media.giphy.com/media/ReBFFavLpEu9OTAJMT/giphy.gif" style="left: 800px; top: 1100px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/fxbEjepdturAlk7UJS/giphy.gif" style="left: 0px; top: 0px;">
+		<img src="https://media.giphy.com/media/dn0DBn3OoM9vQjEwwd/giphy.gif" style="left: 100px; top: 100px;">
+		<img src="https://media.giphy.com/media/f62OcbDyThwVupx6pm/giphy.gif" style="left: 220px; top: 170px;">
+		<img src="https://media.giphy.com/media/iMI5fPCQZSjLN1A3x8/giphy.gif" style="left: 800px; top: 300px;">
+		<img src="https://media.giphy.com/media/W5Uh0nn2R1OvL8ToQo/giphy.gif" style="left: 400px; top: 490px;">
+		<img src="https://media.giphy.com/media/dB5cUnEPznuMy3YAot/giphy.gif" style="left: 200px; top: 530px;">
+		<img src="https://media.giphy.com/media/q6BPWTPwWdoOc/giphy.gif" style="left: 100px; top: 800px;">
+		<img src="https://media.giphy.com/media/8cTekMSYZ3esdrGb1V/giphy.gifv3y/giphy.gif" style="left: 600px; top: 900px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/QJKioAmCkwUI03PcYC/giphy.gif" style="left: 700px; top: 100px;">
+		<img src="https://media.giphy.com/media/4Z3utskFp8PqEPHVsd/giphy.gif" style="left: 200px; top: 500px;"> 
+		<img src="https://media.giphy.com/media/upfHyxcN4YSqs/giphy.gif" style="left: 300px; top: 800px;">
+		<img src="https://media.giphy.com/media/IffxphsWUyta4EAQrA/giphy.gif"  style="left: 100px; top: 1200px;">
+		<img src="https://media.giphy.com/media/ZcKYuJ8bgEhRLg1i8h/giphy.gif"  style="left: 300px; top: 1500px;">
+		<img src="https://media.giphy.com/media/PgzY2IV8Iw6EIVFgg4/giphy.gif" style="left: 400px; top: 1700px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/XfsBpCy8z87wFNJyx5/giphy.gif" style="left: 700px; top: 100px;">
+		<img src="https://media.giphy.com/media/SXNhDcrRA5xn4Danwt/giphy.gif" style="left: 200px; top: 400px;">
+		<img src="https://media.giphy.com/media/KqJNTjFeYtMCQ/giphy.gif" style="left: 300px; top: 300px;">
+		<img src="https://media.giphy.com/media/l4FGIO2vCfJkakBtC/giphy.gif" style="left: 900px; top: 700px;">
+		<img src="https://media.giphy.com/media/xUOxf2Z6fLwKBTfGTK/giphy.gif"  style="left: 900px; top: 1500px;">
+		<img src="https://media.giphy.com/media/TLCZw6Uwwly6b9ekKb/giphy.gif" style="left: 100px; top: 1300px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/L05HgB2h6qICDs5Sms/giphy.gif" style="left: 100px; top: 100px;">
+		<img src="https://media.giphy.com/media/dgwAa9FIRTBeM/giphy.gif" style="left: 470px; top: 400px;">
+		<img src="https://media.giphy.com/media/gFPyt5ZSyTbGqhjOap/giphy.gif" style="left: 200px; top: 500px;">
+		<img src="https://media.giphy.com/media/fH94xEAz4foXUEzJxa/giphy.gif" style="left: 700px; top: 650px;">
+		<img src="https://media.giphy.com/media/paLTRWydS53cHGXKp1/giphy.gif" style="left: 200px; top: 700px;">
+		<img src="https://media.giphy.com/media/fp5QCDii8ytXi/giphy.gif" style="left: 350px; top: 800px;">
+		<img src="https://media.giphy.com/media/wCg6SuPk1a2sM/giphy.gif" style="left: 100px; top: 900px;">
+		<img src="https://media.giphy.com/media/UyOBKkKdFFaUw/giphy.gif" style="left: 800px; top: 1000px;">
+		</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/rXhJL89MenwS4/giphy.gif" style="left: 100px; top: 200px;">
+		<img src="https://media.giphy.com/media/wGkdWCykJrCuI/giphy.gif" style="left: 300px; top: 230px;">
+		<img src="https://media.giphy.com/media/5UJniH68rtRDQEjkFS/giphy.gif" style="left: 700px; top: 100px;">
+		<img src="https://media.giphy.com/media/XxR2vZZr9cLCOHqQQl/giphy.gif" style="left: 10px; top: 330px;">
+		<img src="https://media.giphy.com/media/8c6JFmkMcVcoL6OHnf/giphy.gif" style="left: 300px; top: 500px;">
+		<img src="https://media.giphy.com/media/fT1aMogIZPew4tqC5V/giphy.gif" style="left: 800px; top: 600px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/Jl9e1UFRyMQVy/giphy.gif" style="left: 10px; top: 0px;">
+		<img src="https://media.giphy.com/media/hVEspyKPUjgbe/giphy.gif" style="left: 350px; top: 100px;">
+		<img src="https://media.giphy.com/media/RAZ68SvqafGYE/giphy.gif" style="left: 800px; top: 300px;">
+		<img src="https://media.giphy.com/media/PP4xnqz5KT1rG/giphy.gif" style="left: 200px; top: 400px;">
+		<img src="https://media.giphy.com/media/3mz4FwiZvzS5W/giphy.gif" style="left: 230px; top: 500px;">
+		<img src="https://media.giphy.com/media/jmSi1xSHBJuDfQTiEN/giphy.gif" style="left: 100px; top: 600px;">
+		<img src="https://media.giphy.com/media/jXBwoFfPsCCoE/giphy.gif" style="left: 200px; top: 600px;">
+		<img src="https://media.giphy.com/media/QVPNCDaBnYe075MrdQ/giphy.gif" style="left: 900px; top: 620px;">
+		<img src="https://media.giphy.com/media/9P5eI3AsGoNMhyg45w/giphy.gif" style="left: 800px; top: 800px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/1gdidXnfLA8jkzg9Gg/giphy.gif" style="left: 10px; top: 100px;">
+		<img src="https://media.giphy.com/media/W5vHGFzy4I18I/giphy.gif" style="left: 600px; top: 200px;">
+		<img src="https://media.giphy.com/media/JpGQUcXD6o0FJ7wmWg/giphy.gif" style="left: 500px; top: 240px;">
+		<img src="https://media.giphy.com/media/YWVFCfodqm922sIDy6/giphy.gif" style="left: 400px; top: 600px;">
+		<img src="https://media.giphy.com/media/3ohs7XjrVT0zuGynS0/giphy.gif" style="left: 800px; top: 700px;">
+		<img src="https://media.giphy.com/media/26DN4yp6H7niCDSx2/giphy.gif" style="left: 900px; top: 800px;">
+		<img src="https://media.giphy.com/media/l4pTfRCHhJxQBJo64/giphy.gif" style="left: 1000px; top: 880px;">
+		<img src="https://media.giphy.com/media/1Bd8msCe9BEnqdLBDp/giphy.gif" style="left: 500px; top: 900px;">
+		<img src="https://media.giphy.com/media/ReBFFavLpEu9OTAJMT/giphy.gif" style="left: 800px; top: 1100px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/fxbEjepdturAlk7UJS/giphy.gif" style="left: 0px; top: 0px;">
+		<img src="https://media.giphy.com/media/dn0DBn3OoM9vQjEwwd/giphy.gif" style="left: 100px; top: 100px;">
+		<img src="https://media.giphy.com/media/f62OcbDyThwVupx6pm/giphy.gif" style="left: 220px; top: 170px;">
+		<img src="https://media.giphy.com/media/iMI5fPCQZSjLN1A3x8/giphy.gif" style="left: 800px; top: 300px;">
+		<img src="https://media.giphy.com/media/W5Uh0nn2R1OvL8ToQo/giphy.gif" style="left: 400px; top: 490px;">
+		<img src="https://media.giphy.com/media/dB5cUnEPznuMy3YAot/giphy.gif" style="left: 200px; top: 530px;">
+		<img src="https://media.giphy.com/media/q6BPWTPwWdoOc/giphy.gif" style="left: 100px; top: 800px;">
+		<img src="https://media.giphy.com/media/8cTekMSYZ3esdrGb1V/giphy.gifv3y/giphy.gif" style="left: 600px; top: 900px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/QJKioAmCkwUI03PcYC/giphy.gif" style="left: 700px; top: 100px;">
+		<img src="https://media.giphy.com/media/4Z3utskFp8PqEPHVsd/giphy.gif" style="left: 200px; top: 500px;"> 
+		<img src="https://media.giphy.com/media/upfHyxcN4YSqs/giphy.gif" style="left: 300px; top: 800px;">
+		<img src="https://media.giphy.com/media/IffxphsWUyta4EAQrA/giphy.gif"  style="left: 100px; top: 1200px;">
+		<img src="https://media.giphy.com/media/ZcKYuJ8bgEhRLg1i8h/giphy.gif"  style="left: 300px; top: 1500px;">
+		<img src="https://media.giphy.com/media/PgzY2IV8Iw6EIVFgg4/giphy.gif" style="left: 400px; top: 1700px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/XfsBpCy8z87wFNJyx5/giphy.gif" style="left: 700px; top: 100px;">
+		<img src="https://media.giphy.com/media/SXNhDcrRA5xn4Danwt/giphy.gif" style="left: 200px; top: 400px;">
+		<img src="https://media.giphy.com/media/KqJNTjFeYtMCQ/giphy.gif" style="left: 300px; top: 300px;">
+		<img src="https://media.giphy.com/media/l4FGIO2vCfJkakBtC/giphy.gif" style="left: 900px; top: 700px;">
+		<img src="https://media.giphy.com/media/xUOxf2Z6fLwKBTfGTK/giphy.gif"  style="left: 900px; top: 1500px;">
+		<img src="https://media.giphy.com/media/TLCZw6Uwwly6b9ekKb/giphy.gif" style="left: 100px; top: 1300px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/L05HgB2h6qICDs5Sms/giphy.gif" style="left: 100px; top: 100px;">
+		<img src="https://media.giphy.com/media/dgwAa9FIRTBeM/giphy.gif" style="left: 470px; top: 400px;">
+		<img src="https://media.giphy.com/media/gFPyt5ZSyTbGqhjOap/giphy.gif" style="left: 200px; top: 500px;">
+		<img src="https://media.giphy.com/media/fH94xEAz4foXUEzJxa/giphy.gif" style="left: 700px; top: 650px;">
+		<img src="https://media.giphy.com/media/paLTRWydS53cHGXKp1/giphy.gif" style="left: 200px; top: 700px;">
+		<img src="https://media.giphy.com/media/fp5QCDii8ytXi/giphy.gif" style="left: 350px; top: 800px;">
+		<img src="https://media.giphy.com/media/wCg6SuPk1a2sM/giphy.gif" style="left: 100px; top: 900px;">
+		<img src="https://media.giphy.com/media/UyOBKkKdFFaUw/giphy.gif" style="left: 800px; top: 1000px;">
+		</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/rXhJL89MenwS4/giphy.gif" style="left: 100px; top: 200px;">
+		<img src="https://media.giphy.com/media/wGkdWCykJrCuI/giphy.gif" style="left: 300px; top: 230px;">
+		<img src="https://media.giphy.com/media/5UJniH68rtRDQEjkFS/giphy.gif" style="left: 700px; top: 100px;">
+		<img src="https://media.giphy.com/media/XxR2vZZr9cLCOHqQQl/giphy.gif" style="left: 10px; top: 330px;">
+		<img src="https://media.giphy.com/media/8c6JFmkMcVcoL6OHnf/giphy.gif" style="left: 300px; top: 500px;">
+		<img src="https://media.giphy.com/media/fT1aMogIZPew4tqC5V/giphy.gif" style="left: 800px; top: 600px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/Jl9e1UFRyMQVy/giphy.gif" style="left: 10px; top: 0px;">
+		<img src="https://media.giphy.com/media/hVEspyKPUjgbe/giphy.gif" style="left: 350px; top: 100px;">
+		<img src="https://media.giphy.com/media/RAZ68SvqafGYE/giphy.gif" style="left: 800px; top: 300px;">
+		<img src="https://media.giphy.com/media/PP4xnqz5KT1rG/giphy.gif" style="left: 200px; top: 400px;">
+		<img src="https://media.giphy.com/media/3mz4FwiZvzS5W/giphy.gif" style="left: 230px; top: 500px;">
+		<img src="https://media.giphy.com/media/jmSi1xSHBJuDfQTiEN/giphy.gif" style="left: 100px; top: 600px;">
+		<img src="https://media.giphy.com/media/jXBwoFfPsCCoE/giphy.gif" style="left: 200px; top: 600px;">
+		<img src="https://media.giphy.com/media/QVPNCDaBnYe075MrdQ/giphy.gif" style="left: 900px; top: 620px;">
+		<img src="https://media.giphy.com/media/9P5eI3AsGoNMhyg45w/giphy.gif" style="left: 800px; top: 800px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/1gdidXnfLA8jkzg9Gg/giphy.gif" style="left: 10px; top: 100px;">
+		<img src="https://media.giphy.com/media/W5vHGFzy4I18I/giphy.gif" style="left: 600px; top: 200px;">
+		<img src="https://media.giphy.com/media/JpGQUcXD6o0FJ7wmWg/giphy.gif" style="left: 500px; top: 240px;">
+		<img src="https://media.giphy.com/media/YWVFCfodqm922sIDy6/giphy.gif" style="left: 400px; top: 600px;">
+		<img src="https://media.giphy.com/media/3ohs7XjrVT0zuGynS0/giphy.gif" style="left: 800px; top: 700px;">
+		<img src="https://media.giphy.com/media/26DN4yp6H7niCDSx2/giphy.gif" style="left: 900px; top: 800px;">
+		<img src="https://media.giphy.com/media/l4pTfRCHhJxQBJo64/giphy.gif" style="left: 1000px; top: 880px;">
+		<img src="https://media.giphy.com/media/1Bd8msCe9BEnqdLBDp/giphy.gif" style="left: 500px; top: 900px;">
+		<img src="https://media.giphy.com/media/ReBFFavLpEu9OTAJMT/giphy.gif" style="left: 800px; top: 1100px;">
+	</div>
+	<div class="row">
+		<img src="https://media.giphy.com/media/fxbEjepdturAlk7UJS/giphy.gif" style="left: 0px; top: 0px;">
+		<img src="https://media.giphy.com/media/dn0DBn3OoM9vQjEwwd/giphy.gif" style="left: 100px; top: 100px;">
+		<img src="https://media.giphy.com/media/f62OcbDyThwVupx6pm/giphy.gif" style="left: 220px; top: 170px;">
+		<img src="https://media.giphy.com/media/iMI5fPCQZSjLN1A3x8/giphy.gif" style="left: 800px; top: 300px;">
+		<img src="https://media.giphy.com/media/W5Uh0nn2R1OvL8ToQo/giphy.gif" style="left: 400px; top: 490px;">
+		<img src="https://media.giphy.com/media/dB5cUnEPznuMy3YAot/giphy.gif" style="left: 200px; top: 530px;">
+		<img src="https://media.giphy.com/media/q6BPWTPwWdoOc/giphy.gif" style="left: 100px; top: 800px;">
+		<img src="https://media.giphy.com/media/8cTekMSYZ3esdrGb1V/giphy.gifv3y/giphy.gif" style="left: 600px; top: 900px;">
+	</div>
+	<div class="row surf" id="airport">
+		<h1 class="fadein wow">Anchor Surf</h1>
+	</div>
+	<div class="row" >
+		<img src="board.gif" id="board">
+	</div>
+			<Marquee class="sticky" behavior="scroll"> Anchor Surf   Anchor Surf   Anchor Surf   Anchor Surf   Anchor Surf   Anchor Surf   Anchor Surf   Anchor Surf   Anchor Surf   Anchor Surf   Anchor Surf   Anchor Surf   Anchor Surf   Anchor Surf   Anchor Surf</Marquee>
+
+	<div class="row" id="surf">
+	<span class="row intro fadein wow">
+		<p> 앵커서프 공항에 도착하신 것을 환영합니다.</p><p>여기서부터는 저희 앵커서프에서 안내를 도와드리겠습니다.</p> <p>공항에서는 우선 짐을 부친 후, <br>환전을 마치고, 면세점에서의 쇼핑을 즐기신 후 <br>목적지를 최종 선택해 비행기에 탑승하게 됩니다.</p><p>전 과정을 천천히 음미하시면서, <br>즐기시길 바랍니다.</p><p>감사합니다.</p>
+	</span>
+	</div>
+	<span class="info textbox wow">
+		<h2>Luggage Check-In</h2>
+		<p>짐을 맡기기 전, 각종 태그와 스티커를 붙여 <br>여러분만의 수화물 가방을 만들어보시길 바랍니다. <br>해당 행위는 3차 네트워크 교육과정에서부터 강조하고 있으며, <br>온라인 인격 형성의 기초 단계로 작용합니다.</p>
+		<p>수화물 준비가 끝나면, 아래 버튼을 눌러 수화물을 위탁해주십시오. 안전하게 운반하겠습니다.</p>
+		<button class="button" id="checkButton">수화물 위탁</button>
+	</span>
+	<div class="row" id="luggage">
+		<img src="bag2.png" id="bag2">
+		<img src="sticker1.png" class="sticker150 stickerR30 drag" style="top: 1500px; left: 20px;">
+		<img src="sticker2.png" class="sticker150 drag" style="top: 1500px; left: 60px;">
+		<img src="sticker3.png" class="sticker150 drag" style="top: 1700px; left: 180px;">
+		<img src="sticker4.png" class="sticker300 drag" style="top: 1500px; left: 300px;">
+		<img src="sticker5.png" class="sticker150 drag" style="top: 1300px; left: 60px;">
+		<img src="sticker6.png" class="sticker150 drag" style="top: 1200px; left: 50px;">
+		<img src="sticker7.png" class="sticker300 stickerR-30 drag" style="top: 1000px; left: 60px;">
+		<img src="sticker8.png" class="sticker150 drag" style="top: 1000px; left: 10px;">
+		<img src="sticker9.png" class="sticker150 drag" style="top: 900px; left: 30px;">
+		<img src="sticker10.png" class="sticker150 drag" style="top: 1900px; left: 0px;">
+		<img src="sticker11.png" class="sticker150 drag" style="top: 1300px; left: 150px;">
+	</div>
+	<div class="row"></div>
+	<span class="info textbox wow">
+		<h2>Ticket Issuance</h2>
+		<p>여행 책자는 잘 읽어보셨나요? 비행기 탑승 전, 여행지를 신중히 고른 후 티켓을 클릭하면 해당 여행지로 안전하게 모시도록 하겠습니다.</p>
+	</span>
+	<div class="row">
+		<img src="leaf1_1.png" class="final_leaf" id="final_leaf1_1">
+		<img src="leaf2_1.png" class="final_leaf" id="final_leaf2_1">
+		<img src="leaf3_1.png" class="final_leaf" id="final_leaf3_1">
+		<img src="leaf1_2.png" class="final_leaf_" id="final_leaf1_2">
+		<img src="leaf2_2.png" class="final_leaf_" id="final_leaf2_2">
+		<img src="leaf3_2.png" class="final_leaf_" id="final_leaf3_2">
+		<img src="ticket1.png" class="ticket" id="ticket1">
+		<img src="ticket2.png" class="ticket" id="ticket2">
+		<img src="ticket3.png" class="ticket" id="ticket3">
+	</div>
+	<div class="row"></div>
+		<script type="text/javascript">
+		
+		(function(){
+		var d = false;
+		var target,cx,cy,lx,ly;
+		var t = document.getElementsByClassName("drag");
+		for(var i=0; i<t.length; i++){
+			t[i].style.display = "block";
+			t[i].style.position = "absolute";
+			t[i].style.cursor = "pointer";
+			t[i].ondragstart = function(e){e.preventDefault();};
+			t[i].onmousedown = function(e){ d = true; target = e.target; cx = e.clientX; cy = e.clientY; lx=parseInt(e.target.style.left); ly=parseInt(e.target.style.top);console.log(lx,ly);}
+			t[i].onmouseup = function(){ d = false;}
+			window.onmousemove = function(e){ 
+				if(d){ target.style.left = (lx + e.clientX - cx) + "px"; target.style.top = (ly + e.clientY - cy) + "px";}
+			}
+		}
+	})();
+	new WOW().init();
+	console.log("ok");
+	passButton.onclick = function(){
+			passport.style.animationPlayState = "running"
+		}
+	checkButton.onclick = function(){
+			luggage.style.animationPlayState = "running"
+	}
+	</script>
+</body>
+</html>
